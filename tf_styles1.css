@@ -162,7 +162,7 @@ a.submenuTitle:hover+ul.submenu,ul.submenu:hover {
 */
 
 @media screen and (max-width:480px){
-.horizontal a {
+nav.horizontal a {
     font-size: 1.5em;
     line-height: 2.2em;
 }
@@ -173,7 +173,7 @@ aside {
 
 
 /* ===========
-   mobile Styles 481px and greater
+   Tablet Styles 481px and greater
    ===========
 */
 
@@ -198,11 +198,32 @@ aside {
 */
 
 @media screen and (min-width:769px){
-.submenu {
+ul.submenu {
     background: transparent;
     box-shadow: none;
     display: block;
     position: relative;
     width: 100%;
+}
+
+nav.horizontal::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+nav.horizontal .submenuTitle {
+    display: none;
+}
+
+article{
+    float: left;
+    margin-right: 5%;
+    width: 55%;
+}
+
+aside{
+    float: left;
+    width: 40%;
 }
 }
